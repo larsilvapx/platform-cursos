@@ -1,17 +1,35 @@
 package org.example;
 
+import org.example.dominio.Conteudo;
+import org.example.dominio.Curso;
+import org.example.dominio.Mentoria;
+
+import java.time.LocalDate;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        Curso curso1 = new Curso();
+        curso1.setDescricao("logica");
+        curso1.setTitulo("logica");
+        curso1.setCargaHoraria(2);
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+
+        System.out.println(curso1);
+
+        Mentoria mentoria1 = new Mentoria();
+        mentoria1.setDescricao("Mentoria java");
+        mentoria1.setTitulo("java");
+        mentoria1.setData(LocalDate.now());
+
+        Conteudo conteudo = new Curso();
+        conteudo.setDescricao("curso de python");
+        conteudo.setTitulo("Python");
+
+        System.out.println(conteudo);
+
+        System.out.println(mentoria1);
+
         }
     }
-}
